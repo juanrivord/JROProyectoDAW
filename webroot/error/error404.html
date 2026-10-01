@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚧 Página en Construcción 🚧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:#f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div {
+            max-width: 100%;
+            width: 800px;
+        }
+
+        div img {
+            display: block;
+            width: 100%; 
+            height: auto;
+            margin-bottom: 30px; 
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            font-size: large;
+        }
+
+        #boton {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 1arge;
+            font-weight: bold;
+            text-decoration: none;
+            color: white; 
+            background-color: #ff9900; 
+            border: 3px solid #000;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0px #000; 
+        }
+
+        #boton:hover {
+            background-color: #ffcc00;
+            color: #333;
+            box-shadow: 2px 2px 0px #000;
+            transform: translate(2px, 2px); 
+            cursor: pointer;
+        }
+
+        @media (max-width:768px) {
+            body{
+                display:flex;
+                min-width: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./webroot/images/Pagina-en-construccion.jpg" alt="Página en construcción">
+        
+        <h1>Disculpa las molestias</h1>
+        <p>Estamos trabajando en ello!!</p>
+
+        <button onclick="history.back()" id="boton">Volver</button>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,327 @@
+/*
+https://fontawesome.com/search?ip=classic&ic=free-collection
+*/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #cbd3dc;
+    color: #334155;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+header h1 {
+    margin: 10px 0 30px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: 1200px;
+    margin: -30px auto 40px; 
+    padding: 40px;
+    background-color: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: #1e293b;
+    border-left: 5px solid #4f46e5;
+    padding-left: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 50px 0;
+}
+
+/* --- Buscador --- */
+#contenedor-buscador {
+    margin: 0 auto 50px;
+    max-width: 600px;
+    position: relative;
+}
+
+#buscador {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#buscador:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.icono-buscar {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+
+.caja_practicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.cajas_imagenes {
+    display: block;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.cajas_imagenes:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4f46e5;
+    background-color: #D3D3D3;
+}
+
+.cajas_imagenes:hover .icon-box {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.cajas_imagenes.bloqueado {
+    opacity: 0.6;
+    background-color: #f1f5f9;
+}
+
+.cajas_imagenes figure {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.icon-box {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9; 
+    transition: background-color 0.3s ease;
+}
+
+.icon-box i {
+    font-size: 3.5rem;
+    color: #64748b;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cajas_imagenes:hover .icon-box i {
+    transform: scale(1.2);
+}
+
+.html i { color: #e34c26; }        
+.css i { color: #264de4; }         
+.js i { color: #f0db4f; }          
+.teorico i { color: #0891b2; }     
+.forms i { color: #8b5cf6; }       
+.juego i { color: #ef4444; }       
+.importante i { color: #dc2626; }  
+.locked i { color: #cbd5e1; }     
+.path i {color: #ff00ff;} 
+
+/* Texto de la tarjeta */
+.cajas_imagenes figcaption {
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.95rem;
+    border-top: 1px solid #f1f5f9;
+    background: white;
+}
+
+.cajas_imagenes:hover figcaption {
+    color: #4f46e5;
+}
+
+/* --- Botón Modo Oscuro --- */
+#boton-tema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    transition: 0.5s;
+}
+
+#boton-tema:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px 20px;
+    color: #4d5d73;
+    font-size: 0.9rem;
+    border-top: #f1f5f9 solid 1px;
+}
+
+footer a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer img{
+    width: 2%;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    display: inline-block;
+    margin:auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer img:hover{
+    transform: translateY(-2px);
+}
+
+.social-links {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #94a3b8;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4f46e5;
+}
+
+span{
+    color: #ff5733;
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+/* --- MODO OSCURO --- */
+body.modo-oscuro {
+    background-color: #0f172a;
+    color: #cbd5e1;
+}
+
+body.modo-oscuro main {
+    background-color: #1e293b;
+    box-shadow: none;
+}
+
+body.modo-oscuro h2 {
+    color: #f8fafc;
+    border-left-color: #818cf8;
+}
+
+body.modo-oscuro .cajas_imagenes {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+body.modo-oscuro .icon-box {
+    background-color: #0f172a; 
+}
+
+body.modo-oscuro .icon-box:hover {
+    background-color: #d3d3d3; 
+}
+
+body.modo-oscuro #buscador {
+    background-color: #1e293b;
+    border-color: #475569;
+    color: white;
+}
+body.modo-oscuro #buscador:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.1);
+}
