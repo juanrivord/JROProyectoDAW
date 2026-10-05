@@ -72,7 +72,7 @@ sudo nano 00-installer-config.yaml
 sudo netplan apply
 ```
 
-![Foto del netplan](netplan.png)
+![Foto del netplan](images/netplan.PNG)
 
 #### 2. Actualizar el Sistema Operativo
 ```bash
@@ -200,7 +200,7 @@ sudo chown -R operadorweb:www-data /var/www/html
 sudo chmod -R 775 /var/www/html
 # Comprobamos con ls -ld /var/ww/html
 ```
-![Foto de la comprobación](apachepermisos.PNG)
+![Foto de la comprobación](images/apachepermisos.PNG)
 
 ```bash
 # Añadimos a operadorweb al grupo www-data
