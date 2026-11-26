@@ -1,11 +1,9 @@
-# Indice de esta carpeta de proyecto (estandar de proyecto por asignatura).
-DirectoryIndex indexLoginLogoffTema5.php
-
 # Si se entra en una carpeta sin indice no se muestra el listado de archivos: da un error 403.
 Options -Indexes
 
-# Control de errores con las paginas de este proyecto (carpeta error/), para que funcionen
+# Control de errores con las paginas de este proyecto (carpeta webroot/error/), para que funcionen
 # aunque el proyecto se despliegue solo. ErrorDocument necesita la ruta desde la raiz del servidor:
-# si el proyecto se despliega directamente en la raiz, cambiar a /error/404.html y /error/403.html
-ErrorDocument 404 /JRODWESProyectoLoginLogoffTema5/webroot/error/error404.html
-ErrorDocument 403 /JRODWESProyectoLoginLogoffTema5/webroot/error/error403.html
+# si el proyecto se despliega directamente en la raiz, cambiar a webroot/error/error404.html y webroot/error/error403.html
+ErrorDocument 404 /webroot/error/error404.html
+
+ErrorDocument 403 /webroot/error/error403.html
